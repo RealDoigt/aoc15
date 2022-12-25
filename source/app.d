@@ -1,6 +1,6 @@
 import day1;
 import day2;
-import day3
+import day3;
 import std.algorithm.searching;
 
 void main(string[] args)
