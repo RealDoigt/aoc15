@@ -16,17 +16,20 @@ auto containsTwinPair(string s)
 
 auto containsForbiddenPair(string s)
 {
-    return canFind("ab") || canFind("cd") || canFind("pq") || canFind("xy");
+    return s.canFind("ab") || s.canFind("cd") || s.canFind("pq") || s.canFind("xy");
 }
 
 auto isNice(string s)
 {
+    return s.containsVowels && s.containsTwinPair && !s.containsForbiddenPair;
 }
 
 void day5Main()
 {
-    ulong nice;
+    ulong niceLines;
     
     foreach (line; "inputs/day5/input".readText.strip.split("\n"))
-        if
+        if (line.isNice) ++niceLines;
+        
+    "There are %d nice lines.".writefln(niceLines);
 }
