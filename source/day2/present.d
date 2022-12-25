@@ -32,9 +32,8 @@ struct Present
         return area + smallestSideArea;
     }
     
-    auto ribbonPerimeter()
+    auto ribbonWrapFeet()
     {
-        
         auto l = length << 1,
              w = width  << 1,
              h = height << 1,
@@ -45,6 +44,11 @@ struct Present
         if (side1 < side2 && side1 < side3) return side1;
         if (side2 < side3) return side2;
         return side3;
+    }
+    
+    auto ribbonBowFeet()
+    {
+        return length * width * height;
     }
 }
 
