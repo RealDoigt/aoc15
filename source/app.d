@@ -1,6 +1,12 @@
-import std.stdio;
+import day1;
+//import std.algorithm.searching;
 
-void main()
+void main(string[] args)
 {
-	writeln("Edit source/app.d to start your project.");
+    /*if (args.length == 1)*/ day1Main;
+
+    /*else
+    {
+        if (args.canFind("1")) day1Main;
+    }*/
 }
