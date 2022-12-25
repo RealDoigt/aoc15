@@ -13,7 +13,7 @@ struct Position
 
 void day3Main()
 {
-    santa = Position(0, 0);    
+    auto santa = Position(0, 0);    
     Position[] housesVisited;
     
     housesVisited ~= santa;
