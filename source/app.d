@@ -1,12 +1,13 @@
 import day1;
-//import std.algorithm.searching;
+import day2;
+import std.algorithm.searching;
 
 void main(string[] args)
 {
-    /*if (args.length == 1)*/ day1Main;
+    if (args.length == 1) day2Main;
 
-    /*else
     {
         if (args.canFind("1")) day1Main;
-    }*/
+        if (args.canFind("2")) day2Main;
+    }
 }
