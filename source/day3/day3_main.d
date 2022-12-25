@@ -15,7 +15,7 @@ void day3Main()
         housesVisited.add(santa);
     }
     
-    "Santa visited at %d houses at least once each the first time around.".writefln(housesVisited.length);
+    "Santa visited %d houses at least once each the first time around.".writefln(housesVisited.length);
     
     santa = Position(0, 0);
     housesVisited = [] ~ santa;
@@ -35,4 +35,6 @@ void day3Main()
             housesVisited.add(roboSanta);
         }
     }
+    
+    "Santa and Robo-Santa visited %d houses at least once each the second time around.".writefln(housesVisited.length);
 }
