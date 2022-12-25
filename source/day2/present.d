@@ -24,4 +24,9 @@ struct Present
     {
         return 2 * length * width + 2 * width * height + 2 * height * length;
     }
+    
+    auto paperRequiredInFeet()
+    {
+        return area + smallestSideArea;
+    }
 }
