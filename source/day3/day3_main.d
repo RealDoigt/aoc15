@@ -18,8 +18,19 @@ void day3Main()
     
     housesVisited ~= santa;
     
-    foreach (line; "inputs/day2/input".readText.strip)
+    foreach (arrow; "inputs/day2/input".readText.strip)
     {
+        final switch (arrow)
+        {
+            case '>': ++santa.x;
+            case '<': --santa.x;
+            case 'v': ++santa.y;
+            case '^': --santa.y;
+        }
         
+        if (!housesVisited.canFind(santa))
+            housesVisited ~= santa;
     }
+    
+    "Santa visited at %d houses at least once each".writefln(housesVisited);
 }
