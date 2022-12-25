@@ -11,7 +11,7 @@ struct Position
     
     void move(char direction)
     {
-        final switch (arrow)
+        final switch (direction)
         {
             case '>': ++x; break;
             case '<': --x; break;
@@ -29,5 +29,5 @@ auto canFind(ref Position[] positions, Position toFind)
 
 void add(ref Position[] positions, Position toAdd)
 {
-    if (!position.canFind(toAdd)) positions ~= toAdd;
+    if (!positions.canFind(toAdd)) positions ~= toAdd;
 }
