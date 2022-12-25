@@ -24,7 +24,7 @@ void day3Main()
     
     housesVisited ~= santa;
     
-    foreach (arrow; "inputs/day2/input".readText.strip)
+    foreach (arrow; "inputs/day3/input".readText.strip)
     {
         final switch (arrow)
         {
@@ -38,5 +38,5 @@ void day3Main()
             housesVisited ~= santa;
     }
     
-    "Santa visited at %d houses at least once each".writefln(housesVisited);
+    "Santa visited at %d houses at least once each".writefln(housesVisited.length);
 }
