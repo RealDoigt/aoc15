@@ -26,3 +26,8 @@ auto canFind(ref Position[] positions, Position toFind)
     foreach(p; positions) if (p == toFind) return true;
     return false;
 }
+
+void add(ref Position[] positions, Position toAdd)
+{
+    if (!position.canFind(toAdd)) positions ~= toAdd;
+}
