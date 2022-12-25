@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"doigt"
+	],
+	"copyright": "Copyright © 2022, doigt",
+	"description": "aoc 2015 solutions",
+	"license": "mit",
+	"name": "aoc15"
+}

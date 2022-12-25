@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/aoc15
+aoc15.so
+aoc15.dylib
+aoc15.dll
+aoc15.a
+aoc15.lib
+aoc15-test-*
+*.exe
+*.o
+*.obj
+*.lst
