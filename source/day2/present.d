@@ -64,3 +64,11 @@ auto paperRequiredInFeet(Present*[] presents)
     foreach(p; presents) total += p.paperRequiredInFeet;
     return total;
 }
+
+auto ribbonRequiredInFeet(Present*[] presents)
+{
+    ulong total;
+    
+    foreach(p; presents) total += p.ribbonRequiredInFeet;
+    return total;
+}
