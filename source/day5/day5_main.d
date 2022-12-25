@@ -2,9 +2,20 @@ module day5.main;
 import std.algorithm;
 import common;
 
-auto containsVowels(string s)
+auto contains3Vowels(string s)
 {
-    return s.canFind("a") || s.canFind("e") || s.canFind("i") || s.canFind("o") || s.canFind("u");
+    int count;
+    
+    foreach(c; s)
+    {
+        switch (c)
+        {
+            case 'a','e','i','o','u': ++count; break;
+            default: break;
+        }
+    }
+    
+    return count >= 3;
 }
 
 auto containsTwinPair(string s)
@@ -22,7 +33,7 @@ auto containsForbiddenPair(string s)
 
 auto isNice(string s)
 {
-    return s.containsVowels && s.containsTwinPair && !s.containsForbiddenPair;
+    return s.contains3Vowels && s.containsTwinPair && !s.containsForbiddenPair;
 }
 
 void day5Main()
