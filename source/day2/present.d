@@ -13,7 +13,7 @@ struct Present
     
     auto smallestSideArea()
     {
-        auto side1 = l * w, side2 = l * h, side3 = w * h;
+        auto side1 = length * width, side2 = length * height, side3 = width * height;
         
         if (side1 < side2 && side1 < side3) return side1;
         if (side2 < side3) return side2;
