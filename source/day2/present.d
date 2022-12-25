@@ -4,7 +4,7 @@ struct Present
 {
     immutable uint length, width, height;
     
-    this(uint l, w, h)
+    this(uint l, uint w, uint h)
     {
         length = l;
         width  = w;
