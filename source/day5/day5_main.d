@@ -1,4 +1,5 @@
 module day5.main;
+import std.algorithm;
 import common;
 
 auto containsVowels(string s)
