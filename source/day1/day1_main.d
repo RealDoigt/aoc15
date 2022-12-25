@@ -13,7 +13,11 @@ void day1Main()
         else
         {
             --floor;
-            if (!hasEnteredBasement && floor == -1) basement = i + 1;
+            if (!hasEnteredBasement && floor == -1)
+            {   
+                basement = i + 1;
+                hasEnteredBasement = true;
+            }
         }
     }
     
