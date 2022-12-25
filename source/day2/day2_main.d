@@ -1,12 +1,13 @@
 module day2.main;
 import std.conv;
 import common;
+import day2;
 
 void day2Main()
 {
     Present*[] presents;
     
-    foreach (line;  "inputs/day1/input".readText.strip.split("\n"))
+    foreach (line;  "inputs/day2/input".readText.strip.split("\n"))
     {
         auto numberStrings = line.split("x");
         presents ~= new Present
