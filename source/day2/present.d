@@ -50,6 +50,11 @@ struct Present
     {
         return length * width * height;
     }
+    
+    auto ribbonRequiredInFeet()
+    {
+        return ribbonWrapFeet + ribbonBowFeet;
+    }
 }
 
 auto paperRequiredInFeet(Present*[] presents)
