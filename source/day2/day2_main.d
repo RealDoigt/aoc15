@@ -19,4 +19,5 @@ void day2Main()
     }
     
     "Total required paper will be %d feets!".writefln(presents.paperRequiredInFeet);
+    "Total required ribbon will be %d feets!".writefln(presents.ribbonRequiredInFeet);
 }
