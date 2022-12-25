@@ -1,42 +1,33 @@
 module day3.main;
 import common;
-
-struct Position
-{
-    long x, y;
-    
-    bool opEquals(Position right) const
-    {
-        return x == right.x && y == right.y;
-    }
-}
-
-auto canFind(ref Position[] positions, Position toFind)
-{
-    foreach(p; positions) if (p == toFind) return true;
-    return false;
-}
+import day3;
 
 void day3Main()
 {
-    auto santa = Position(0, 0);    
+    auto santa = Position(0, 0), arrows = "inputs/day3/input".readText.strip;    
     Position[] housesVisited;
     
     housesVisited ~= santa;
     
-    foreach (arrow; "inputs/day3/input".readText.strip)
+    foreach (arrow; arrows)
     {
-        final switch (arrow)
-        {
-            case '>': ++santa.x; break;
-            case '<': --santa.x; break;
-            case 'v': ++santa.y; break;
-            case '^': --santa.y; break;
-        }
+        santa.move(arrow);
         
         if (!housesVisited.canFind(santa))
             housesVisited ~= santa;
     }
     
-    "Santa visited at %d houses at least once each".writefln(housesVisited.length);
+    "Santa visited at %d houses at least once each the first time around.".writefln(housesVisited.length);
+    
+    santa = Position(0, 0);
+    housesVisited = [] ~ santa;
+    auto roboSanta = Position(0, 0);
+    
+    foreach(i, arrow; arrows)
+    {
+        if (i % 2 == 0)
+        {
+            santa.move(arrow);
+        }
+    }
 }
