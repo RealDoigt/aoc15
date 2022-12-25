@@ -30,3 +30,11 @@ struct Present
         return area + smallestSideArea;
     }
 }
+
+auto paperRequiredInFeet(Present*[] presents)
+{
+    ulong total;
+    
+    foreach(p; presents) total += p.paperRequiredInFeet;
+    return total;
+}
