@@ -11,6 +11,12 @@ struct Position
     }
 }
 
+auto canFind(ref Position[] positions, Position toFind)
+{
+    foreach(p; positions) if (p == toFind) return true;
+    return false;
+}
+
 void day3Main()
 {
     auto santa = Position(0, 0);    
@@ -22,10 +28,10 @@ void day3Main()
     {
         final switch (arrow)
         {
-            case '>': ++santa.x;
-            case '<': --santa.x;
-            case 'v': ++santa.y;
-            case '^': --santa.y;
+            case '>': ++santa.x; break;
+            case '<': --santa.x; break;
+            case 'v': ++santa.y; break;
+            case '^': --santa.y; break;
         }
         
         if (!housesVisited.canFind(santa))
