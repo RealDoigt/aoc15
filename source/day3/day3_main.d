@@ -12,9 +12,7 @@ void day3Main()
     foreach (arrow; arrows)
     {
         santa.move(arrow);
-        
-        if (!housesVisited.canFind(santa))
-            housesVisited ~= santa;
+        housesVisited.add(santa);
     }
     
     "Santa visited at %d houses at least once each the first time around.".writefln(housesVisited.length);
@@ -28,6 +26,13 @@ void day3Main()
         if (i % 2 == 0)
         {
             santa.move(arrow);
+            housesVisited.add(santa);
+        }
+        
+        else
+        {
+            roboSanta.move(arrow);
+            housesVisited.add(roboSanta);
         }
     }
 }
