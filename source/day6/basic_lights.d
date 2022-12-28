@@ -3,7 +3,7 @@ import day6.main;
 
 bool[size][size] lights;
 
-void setLight(size_t x, size_t y, string action)
+void setLight(ulong x, ulong y, string action)
 {
     switch(action)
     {
@@ -13,10 +13,10 @@ void setLight(size_t x, size_t y, string action)
     }
 }
 
-void setLights(size_t startX, size_t startY, size_t endX, size_t endY, string action)
+void setLights(ulong startX, ulong startY, ulong endX, ulong endY, string action)
 {
-    for (size_t y = startY; y <= endY; ++y)
-        for (size_t x = startX; x <= endX; ++x)
+    for (ulong y = startY; y <= endY; ++y)
+        for (ulong x = startX; x <= endX; ++x)
             setLight(x, y, action);
 }
 
@@ -24,8 +24,8 @@ auto countLightsOn()
 {
     ulong total;
     
-    for (size_t y; y < size; ++y)
-        for (size_t x; x < size; ++x)
+    for (ulong y; y < size; ++y)
+        for (ulong x; x < size; ++x)
             if (lights[y][x]) ++total;
     
     return total;
