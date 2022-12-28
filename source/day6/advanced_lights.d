@@ -11,7 +11,7 @@ void setAdjustableLight(ulong x, ulong y, string action)
             
         case "off": 
             
-            if(adjustableLights > 0)
+            if(adjustableLights[y][x] > 0)
                 --adjustableLights[y][x]; 
         
             break;
