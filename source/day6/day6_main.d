@@ -22,7 +22,7 @@ void setLights(size_t startX, size_t startY, size_t endX, size_t endY, string ac
             setLight(x, y, action);
 }
 
-auto count activeLights()
+auto countLightsOn()
 {
     ulong total;
     
@@ -48,4 +48,6 @@ void day6Main()
             values[0]
         );
     }
+    
+    "There are %d lights on!".writefln(countLightsOn);
 }
