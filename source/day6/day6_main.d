@@ -2,7 +2,7 @@ module day6.main;
 import common;
 
 enum size = 1000;
-static bool[size][size] lights;
+bool[size][size] lights;
 
 void setLight(size_t x, size_t y, string action)
 {
