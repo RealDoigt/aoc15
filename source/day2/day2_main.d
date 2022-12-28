@@ -7,7 +7,7 @@ void day2Main()
 {
     Present*[] presents;
     
-    foreach (line;  "inputs/day2/input".readText.strip.split("\n"))
+    foreach (line; "inputs/day2/input".readText.strip.split("\n"))
     {
         auto numberStrings = line.split("x");
         presents ~= new Present
