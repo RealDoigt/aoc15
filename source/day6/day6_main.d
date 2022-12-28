@@ -1,4 +1,5 @@
 module day6.main;
+import std.conv;
 import common;
 
 enum size = 1000;
@@ -34,5 +35,17 @@ auto count activeLights()
 
 void day6Main()
 {
-    
+    foreach (line; "inputs/day2/input".readText.strip.split("\n"))
+    {
+        auto values = line.split(" ");
+        
+        setLights
+        (
+            values[1].to!size_t, 
+            values[2].to!size_t, 
+            values[3].to!size_t, 
+            values[4].to!size_t, 
+            values[0]
+        );
+    }
 }
