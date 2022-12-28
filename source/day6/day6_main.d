@@ -20,6 +20,18 @@ void setLights(size_t startX, size_t startY, size_t endX, size_t endY, string ac
             setLight(x, y, action);
 }
 
+auto count activeLights()
+{
+    ulong total;
+    
+    for (size_t y; y < 1000; ++y)
+        for (size_t x; x < 1000; ++x)
+            if (lights[y][x]) ++total;
+    
+    return total;
+}
+
 void day6Main()
 {
+    
 }
