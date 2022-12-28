@@ -13,6 +13,13 @@ void setLight(size_t x, size_t y, string action)
     }
 }
 
+void setLights(size_t startX, size_t startY, size_t endX, size_t endY, string action)
+{
+    for (size_t y = startY; y <= endY; ++y)
+        for (size_t x = startX; x <= endX; ++x)
+            setLight(x, y, action);
+}
+
 void day6Main()
 {
 }
