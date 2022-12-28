@@ -1,7 +1,8 @@
 module day6.main;
 import common;
 
-static bool[1000][1000] lights;
+enum size = 1000;
+static bool[size][size] lights;
 
 void setLight(size_t x, size_t y, string action)
 {
@@ -24,8 +25,8 @@ auto count activeLights()
 {
     ulong total;
     
-    for (size_t y; y < 1000; ++y)
-        for (size_t x; x < 1000; ++x)
+    for (size_t y; y < size; ++y)
+        for (size_t x; x < size; ++x)
             if (lights[y][x]) ++total;
     
     return total;
