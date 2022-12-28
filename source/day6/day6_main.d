@@ -1,6 +1,7 @@
 module day6.main;
 import std.conv;
 import common;
+import day6;
 
 enum size = 1000;
 
@@ -12,10 +13,10 @@ void day6Main()
         
         auto stValues = 
         [
-            values[1].to!size_t, 
-            values[2].to!size_t, 
-            values[3].to!size_t, 
-            values[4].to!size_t
+            values[1].to!ulong, 
+            values[2].to!ulong, 
+            values[3].to!ulong, 
+            values[4].to!ulong
         ];
         
         setLights
